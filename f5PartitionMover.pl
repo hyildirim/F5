@@ -6,8 +6,7 @@ my $fileName = $ARGV[0];
 our $newConfig = "newCustomerConfig.txt";
 our $customerPartition = "Common";
 
-# First make sure to create the new partition and save the config
-push (@changes, "tmsh save sys ucs beforeMaintenance.ucs");
+# First make sure to create the new partition
 push (@changes, "tmsh create auth partition $customerPartition");
 
 deleteExistingConfig($fileName, \@changes);
@@ -20,10 +19,6 @@ exit;
 sub createNewConfig
 {
    my ($f, $changes) = @_;
- 
-   
-   
-   
    open (F, "$f");
    while (<F>)
    {
