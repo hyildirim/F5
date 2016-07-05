@@ -19,3 +19,5 @@ tmsh list ltm pool one-line >> /shared/tmp/customerConfiguration.conf
 
 # get all nodes
 tmsh list ltm node one-line >> /shared/tmp/customerConfiguration.conf
+
+curl -o /root/f5PartitionMover.pl -s https://raw.githubusercontent.com/hyildirim/F5/master/f5PartitionMover.pl
