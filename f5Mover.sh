@@ -15,7 +15,7 @@ tmsh list ltm virtual one-line | grep -v FORWARDING > /shared/tmp/customerConfig
 
 
 # get all customer pools
-tmsh list ltm pool one-line >> > /shared/tmp/customerConfiguration.conf
+tmsh list ltm pool one-line >> /shared/tmp/customerConfiguration.conf
 
 # get all nodes
-tmsh list ltm node one-line >> > /shared/tmp/customerConfiguration.conf
+tmsh list ltm node one-line >> /shared/tmp/customerConfiguration.conf
