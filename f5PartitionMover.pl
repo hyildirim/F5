@@ -4,7 +4,7 @@ use warnings;
 my @changes;
 my $fileName = $ARGV[0];
 our $newConfig = "newCustomerConfig.txt";
-our $customerPartition = "Common";
+our $customerPartition = "Customer";
 
 # First make sure to create the new partition
 push (@changes, "tmsh create auth partition $customerPartition");
