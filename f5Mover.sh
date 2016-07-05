@@ -44,6 +44,8 @@ tmsh list ltm node one-line >> /shared/tmp/customerConfiguration.conf
 
 echo "INFO: Downloading the script from github"
 curl -o /root/f5PartitionMover.pl -s https://raw.githubusercontent.com/hyildirim/F5/master/f5PartitionMover.pl
+curl -o /root/f5ApplyChanges.pl -s https://raw.githubusercontent.com/hyildirim/F5/master/f5ApplyChanges.pl
+
 echo "INFO: Script was saved under /root/f5PartitionMover.pl"
 echo "INFO: Examine /shared/tmp/customerConfiguration.conf VERY CAREFULLY and EDIT if necessary"
 echo "INFO: if you would like to exclude certain objects from being moved to another partition"
