@@ -63,6 +63,9 @@ sub createNewConfig
          $_ =~ s/state up//g;
          $_ =~ s/state down//g;
          $_ =~ s/ monitor / monitor \/Common\//g;
+         $_ =~ s/ clone-pools / clone-pools replace-all-with /g; 
+         $_ =~ s/ persist \{/persist replace-all-with \{/g;
+         
          my @a = split(/\s+/); shift(@a); shift(@a); my $vs = shift(@a);
          pop(@a); pop(@a); pop(@a); push(@a, "}");
          push (@{$changes}, "tmsh create ltm virtual \/$customerPartition/$vs " . join(" ", @a));
