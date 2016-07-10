@@ -8,7 +8,7 @@
 DATE=`date +%Y-%m-%d`
 
 echo "INFO: Saving current configuration to /var/local/ucs/beforeMaintenance-$DATE.ucs"
-
+tmsh save sys ucs /var/local/ucs/beforeMaintenance-$DATE.ucs
 BACKUPDIR="/root/configBackups/$DATE";
 
 
